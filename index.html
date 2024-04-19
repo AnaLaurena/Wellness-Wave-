@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <title>WellnessWave</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <a href="#" class="logo"> <i class='bx bx-pulse'></i></a>
+      <span class="company-name">Wellness Wave</span>
+    </div>
+    <nav class="nav-menu">
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li>
+          <a href="#">Cronômetro</a>
+          <ul>
+            <li><a href="#">Cronômetro de Caminhada</a></li>
+            <li><a href="#">Cronômetro de Corrida</a></li>
+            <li><a href="#">Cronômetro de Pedalada</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Histórico de Atividades</a></li>
+        <li><a href="#">Registrar</a>
+          <ul>
+            <li><a href="#">Registrar Alimentação</a></li>
+            <li><a href="#">Registrar Água Bebida</a></li>
+            <li><a href="#">Registrar Sono</a></li>
+          </ul>
+        </li>
+      </ul>
+      <button class="nav-button" onclick="openNav()">
+        <i class='bx bx-menu'></i>
+      </button>
+    </nav>
+  </header>
+
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="#">Cadastrar</a>
+      <a href="#">Entrar na Conta</a>
+      <a href="#">Perfil</a>
+      <a href="#">Configurações</a>
+    </div>
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+  </script>
+
+</body>
+
+</html>
