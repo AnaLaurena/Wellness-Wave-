@@ -28,7 +28,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
   width: 27rem;
   padding: 50px;
-  background-color: rgba(0, 0, 0, 0.5); /* Cor com 50% de opacidade */
+  background-color: rgba(0, 0, 0, 0.5); 
 }
 
 .form {
@@ -63,9 +63,9 @@ button {
   border: none;
   cursor: pointer;
   width: 30%;
-  transition: background-color 0.3s ease; /* Adicionando uma transição suave */
+  transition: background-color 0.3s ease; 
 }
 
 button:hover {
-  background-color: rgba(76, 175, 80, 0.8); /* Mudança de opacidade ao passar o mouse */
+  background-color: rgba(76, 175, 80, 0.8);
 }
