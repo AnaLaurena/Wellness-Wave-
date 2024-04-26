@@ -1,24 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<script type="text/javascript" src="js/ cadastro.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">   
-    <title>Wellness</title>
     <link rel="stylesheet" href="cadastro.css">
+    <title>Wellness</title>
 </head>
 <body>
 
     <div class="background-image">
         <div class="tela-cadastro">
-            <form class="form">
+            <form class="form" onsubmit="return validarFormulario()">
                 <h1>Cadastro</h1>
                 <label for="Nome">Nome:</label><br>     
                 <input type="text" id="Nome" name="Nome" placeholder="Nome"><br>
-<label for="Sexo">Sexo:</label><br>     
+                <label for="Sexo">Sexo:</label><br>     
                 <input type="text" id="Sexo" name="Sexo" placeholder="Sexo"><br>
                 <label for="Email">Email:</label><br>
                 <input type="email" id="Email" name="Email" placeholder="Email"><br>
@@ -30,13 +27,38 @@
                 <input type="password" id="Password" name="Password" placeholder="Senha"><br><br>
 
                 <button type="submit">Enviar</button><br><br>
-                <button type="button"class="clear" >Login</button><br>
+                <button type="button" class="clear" onclick="window.location.href='login.html'">Login</button><br>
             </form>
-          <form class="form" onsubmit="return validarFormulario()">
-    
-          
         </div>
     </div>
 
-</body>
-</html>
+<script>
+    function validarFormulario() {
+        var nome = document.getElementById("Nome").value;
+        var email = document.getElementById("Email").value;
+        var sexo = document.getElementById("Sexo").value;
+        var nickname = document.getElementById("Nickname").value;
+        var senha = document.getElementById("Password").value;
+        var confirmarSenha = document.getElementById("ConfirmPassword").value;
+
+        if (nome === "" || email === "" || sexo === "" || nickname === "" || senha === "" || confirmarSenha === "") {
+            alert("Por favor, preencha todos os campos.");
+            return false; // Impede o envio do formulário se algum campo estiver vazio
+        }
+
+        if (senha !== confirmarSenha) {
+            alert("As senhas não coincidem.");
+            return false;
+        }
+
+  
+        if (!senha.match(/^(?=.*\d)(?=.*[a-zA-Z]).{8,}$/)) {
+            alert("A senha deve conter pelo menos 8 caracteres, incluindo pelo menos um número e um caractere alfabético.");
+            return false;
+        }
+
+        // Aqui você pode adicionar mais validações conforme necessário
+
+        return true; // Permite o envio do formulário se todas as validações passarem
+    }
+</script>
