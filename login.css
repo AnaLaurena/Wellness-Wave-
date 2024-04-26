@@ -1,5 +1,5 @@
 h1{ 
-    color:White ;
+    color: Black;
   }
   lebal{
     color:white;
@@ -17,7 +17,7 @@ h1{
 }
 
 .tela-login {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgb(255, 255, 255, 0.2);
     position: absolute;
     top: 50%;
     left: 50%;
