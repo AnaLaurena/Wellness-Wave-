@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,30 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css">
+    <title>Login</title>
 </head>
 <body>
 
     <div class="tela-login">
        <form>
-      
-      <h1>Login</h1>
-         <lebal>Email</lebal><br>
-        <input type="text" name:"Email" placeholder="Email: "><br><br>
- 
-         <lebal> Senha</lebal><br>
-        <input type="password" name:"password" placeholder="Senha:"><br><br>
 
-  <button type="button" class="clear"> Esqueci minha senha
-         </button> <br><br>
-         
-     <button type="button">Entra</button><br><br>
-   
-       <button type="button"> Cria Conta</button>
+      <h1>Login</h1>
+         <label>Email</label><br>
+        <input type="text" name="Email" placeholder="Email:"><br><br>
+
+         <label>Senha</label><br>
+        <input type="password" name="password" placeholder="Senha:"><br><br>
+
+        <button type="button" class="clear">Esqueci minha senha</button> <br><br>
+
+        <button type="button">Entrar</button><br><br>
+
+        <button type="button" id="criarContaBtn">Criar Conta</button>
       </form>
     </div>
+
+<script>
+    document.getElementById("criarContaBtn").addEventListener("click", function() {
+        window.location.href = "cadastro.html";
+    });
+</script>
+
 </body>
 </html>
-
-
-
-
