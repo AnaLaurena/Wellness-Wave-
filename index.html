@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,10 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap">
   <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="your_website_domain/css_root/flaticon.css">
   <title>WellnessWave</title>
 </head>
 
@@ -21,51 +21,57 @@
       <span class="company-name">Wellness Wave</span>
     </div>
     <nav class="nav-menu">
-      <ul class="menu">
-        <li><a href="#">Home</a></li>
+      <ul class="menu" id="menu">
+        <li><a href="#"<i class='bx bx-home-heart' ></i>Home</a></li>
         <li>
-          <a href="#">Cronômetro</a>
+          <a href="#"<i class='bx bxs-stopwatch' ></i>Cronômetro</a>
           <ul>
-            <li><a href="#">Cronômetro de Caminhada</a></li>
-            <li><a href="#">Cronômetro de Corrida</a></li>
-            <li><a href="#">Cronômetro de Pedalada</a></li>
+            <li><a href="#"><i class='bx bx-walk'></i> Cronômetro de Caminhada</a></li>
+<li><a href="#"><i class='bx bx-run'></i> Cronômetro de Corrida</a></li>
+            <li><a href="#"><i class='fi fi-rr-biking'></i> Cronômetro de Pedalada</a></li>
           </ul>
         </li>
-        <li><a href="#">Histórico de Atividades</a></li>
-        <li><a href="#">Registrar</a>
+        <li>
+          <a href="#"<i class='bx bx-detail' ></i>Dicas</a>
           <ul>
-            <li><a href="#">Registrar Alimentação</a></li>
-            <li><a href="#">Registrar Água Bebida</a></li>
-            <li><a href="#">Registrar Sono</a></li>
+            <li><a href="/Alimentação.html">Dica de Alimentação</a></li>
+            <li><a href="#">Dicas Para Exercitar-Se</a></li>
+            <li><a href="#">Dicas Para Sono de Qualidade</a></li>
+            <li><a href="#">Dicas Para Relaxar</a></li>
+          </ul>
+        </li>
+<li><a href="#"<i class='bx bx-notepad' ></i>Histórico de Atividades</a></li>
+        <li>
+          <a href="#"<i class='bx bxs-edit' ></i>Registrar</a>
+          <ul>
+            <li><a href="#"<i class='bx bxs-bowl-hot' ></i>Registrar Alimentação</a></li>
+    <li><a href="#"<i class='bx bx-wine' ></i>Registrar Água Bebida</a></li>
+            <li><a href="#"><i class='bx bxs-bed'></i> Registrar Sono</a></li>
           </ul>
         </li>
       </ul>
-      <button class="nav-button" onclick="openNav()">
+      <button class="nav-button" onclick="toggleNav()">
         <i class='bx bx-menu'></i>
       </button>
     </nav>
   </header>
 
-  <div id="myNav" class="overlay">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay" id="overlay">
     <div class="overlay-content">
-      <a href="/cadastro.html">Cadastrar</a>
-      <a href="/login.html">Entrar na Conta</a>
+      <i class='bx bx-x' onclick="toggleNav()" style="position: absolute; top: 20px; left: 20px; font-size: 2em; cursor: pointer;"></i>
+      <a href="/cadastro.html">Cadastro</a>
+      <a href="/login.html">Fazer Login </a>
       <a href="#">Perfil</a>
       <a href="#">Configurações</a>
     </div>
   </div>
-
+  <i class="flaticon-airplane49"></i> <span class="flaticon-airplane49"></span>
   <script>
-    function openNav() {
-      document.getElementById("myNav").style.width = "100%";
-    }
-
-    function closeNav() {
-      document.getElementById("myNav").style.width = "0%";
+    function toggleNav() {
+      const overlay = document.getElementById("overlay");
+      overlay.classList.toggle("active");
     }
   </script>
-
 </body>
 
 </html>
