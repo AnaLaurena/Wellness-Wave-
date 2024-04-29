@@ -13,21 +13,21 @@ function validarFormulario() {
 
     if (senha !== confirmarSenha) {
         alert("As senhas não coincidem.");
-        return false; // Impede o envio do formulário se as senhas não coincidirem
+        return false; 
     }
 
-    // Validar se a senha tem pelo menos 8 caracteres alfanuméricos
+    
     if (!senha.match(/^(?=.*[a-zA-Z])(?=.*\d).{8,}$/)) {
         alert("A senha deve conter pelo menos 8 caracteres, incluindo pelo menos um número e um caractere alfabético.");
         return false;
     }
 
-    // Aqui você pode adicionar mais validações conforme necessário
+    
 
-    return true; // Permite o envio do formulário se todas as validações passarem
+    return true; 
 }
 
-// Adiciona evento de clique ao botão de login
+
 document.querySelector("button.clear").addEventListener("click", function() {
     window.location.href = "login.html";
 });
