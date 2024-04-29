@@ -27,3 +27,52 @@
           <a href="#"<i class='bx bxs-stopwatch' ></i>Cronômetro</a>
           <ul>
             <li><a href="#"><i class='bx bx-walk'></i> Cronômetro de Caminhada</a></li>
+<li><a href="#"><i class='bx bx-run'></i> Cronômetro de Corrida</a></li>
+            <li><a href="#"><i class='fi fi-rr-biking'></i> Cronômetro de Pedalada</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"<i class='bx bx-detail' ></i>Dicas</a>
+          <ul>
+            <li><a href="/receita.html">Dica de Alimentação</a></li>
+            <li><a href="#">Dicas Para Exercitar-Se</a></li>
+            <li><a href="#">Dicas Para Sono de Qualidade</a></li>
+            <li><a href="#">Dicas Para Relaxar</a></li>
+          </ul>
+        </li>
+<li><a href="#"<i class='bx bx-notepad' ></i>Histórico de Atividades</a></li>
+        <li>
+          <a href="#"<i class='bx bxs-edit' ></i>Registrar</a>
+          <ul>
+            <li><a href="#"<i class='bx bxs-bowl-hot' ></i>Registrar Alimentação</a></li>
+    <li><a href="#"<i class='bx bx-wine' ></i>Registrar Água Bebida</a></li>
+            <li><a href="#"><i class='bx bxs-bed'></i> Registrar Sono</a></li>
+          </ul>
+        </li>
+      </ul>
+      <button class="nav-button" onclick="toggleNav()">
+        <i class='bx bx-menu'></i>
+      </button>
+    </nav>
+  </header>
+
+  <div class="overlay" id="overlay">
+    <div class="overlay-content">
+      <!-- Ícone para fechar o menu responsivo -->
+      <i class='bx bx-x' onclick="toggleNav()" style="position: absolute; top: 20px; left: 20px; font-size: 2em; cursor: pointer;"></i>
+      <a href="/cadastro.html">Cadastro</a>
+      <a href="/login.html">Fazer Login </a>
+      <a href="/Perfil.html">Perfil</a>
+      <a href="#">Configurações</a>
+    </div>
+  </div>
+  <i class="flaticon-airplane49"></i> <span class="flaticon-airplane49"></span>
+  <script>
+    function toggleNav() {
+      const overlay = document.getElementById("overlay");
+      overlay.classList.toggle("active");
+    }
+  </script>
+</body>
+
+</html>
