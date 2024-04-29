@@ -43,22 +43,3 @@
 
         if (nome === "" || email === "" || sexo === "" || nickname === "" || senha === "" || confirmarSenha === "") {
             alert("Por favor, preencha todos os campos.");
-            return false; // Impede o envio do formulário se algum campo estiver vazio
-        }
-
-        if (senha !== confirmarSenha) {
-            alert("As senhas não coincidem.");
-            return false;
-        }
-
-  
-        if (!senha.match(/^(?=.*\d)(?=.*[a-zA-Z]).{8,}$/)) {
-            alert("A senha deve conter pelo menos 8 caracteres, incluindo pelo menos um número e um caractere alfabético.");
-            return false;
-        }
-
-        // Aqui você pode adicionar mais validações conforme necessário
-
-        return true; // Permite o envio do formulário se todas as validações passarem
-    }
-</script>
